@@ -65,12 +65,45 @@
 			</tfoot>
 		</table>
 	</p>
-	<p> <h1> Кнопки и Ссылки</h1>
-	<a href="http://www.google.com" target="_blank">Google.com</a> <br>
-	<a href="mailto:jm.caffeine@gmail.com">Send me E-Mail</a> <br>
-	<a href="tel:+48574770668">+48574774189</a>
-	
+	<p> <h1> Кнопки и Ссылки</h1> </p>
+	<p> <h3> ССЫЛКИ</h3>
+		<a href="http://www.google.com" target="_blank">Google.com</a> <br>
+		<a href="mailto:jm.caffeine@gmail.com">Send me E-Mail</a> <br>
+		<a href="tel:+48574770668">+48574774189</a>
+		<a href="t.me:http://t.me/eztizzy">Telegram</a> <br>
+		<a href="http://www.t.me/eztizzy">sadasd</a>
 	</p>
-	
+	<p> <h3>КНОПКИ</h3>
+		<button type="button">Button</button>
+		<button type="submit" autofocus>Submit</button>
+		<button type="button" disabled>disabled</button>
+	</p>
+	<p> <h1>Полезные Теги</h1>
+		<abbr title="Abbreviation">ABBR</abbr> <br>
+		<hr>
+		<input list="list">
+		<datalist id="list">
+			<option value="Music"></option>
+			<option value="Video"></option>
+			<option value="Pictures"></option>
+		</datalist> <br>
+			<hr>
+			<mark>sss</mark> <br>
+			<canvas id="example" width ="200" height="200">
+				<script>
+					const drawingCanvas = document.getElementById('example');
+					if (drawingCanvas && drawingCanvas.getContext) {
+					const context = drawingCanvas.getContext('2d');
+					context.fillStyle = "#000";
+					context.beginPath();
+					context.arc(100,100,100,0,Math.PI*2, true);
+					context.closePath();
+					context.stroke();
+					context.fill();
+					}
+				</script>
+			</canvas>
+	</p>
+	<a href="contacts.html">РАЗМЕТКА</a>
 	</body>
 </html>
