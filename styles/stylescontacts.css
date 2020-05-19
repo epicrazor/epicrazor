@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns:minmax(375px,auto) minmax(375px,auto) minmax(375px,auto);
+  grid-template-rows: 100vh auto auto auto;
+  background-color: ;
+  padding:0px;
+  grid-gap: 1px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.grid-item {
+  background-color: rgb(230, 231, 233);
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 0px;
+  font-size: 30px;
+  text-align: center;
+}
+.header{
+  grid-column: 1 / 5;
+  background-image: url(../images/headerbg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+  .headertitle{
+    text-align: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+    .headertitle h1{
+      font-size: 100px;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      text-shadow: 2px 2px 5px grey;
+      text-transform: uppercase;
+    }
+  .menu{
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    overflow: auto;
+    top: 0;
+    right: 10px;
+    /* transform: translate(-50%); */
+    color: black;
+    z-index: 10;
+    background-color: rgba(227, 228, 230, 0.2);
+  }
+    .menu a{
+      text-decoration: none;
+      color: rgba(120, 10, 10, 0.3);
+      box-sizing: border-box;
+      margin: 0;
+      text-transform: uppercase;
+      text-align: center;
+      width: 20%;
+      padding: 0px;
+      float: left;
+      font-size: 22px;
+      font-weight: 400;
+      font-family: 'Titillium Web', sans-serif;
+      text-shadow: 0px 2px 3px ;
+    }
+    .menu a:hover{
+      color: rgba(120, 10, 10, 1);
+    }
+.about{
+  grid-column: 1 / 5;
+  background-color: rgb(230, 231, 233);
+  position: relative;
+}
+  .aboutphoto{
+    float: left;
+    width: 50%;
+    overflow: hidden;
+  }
+  .authorphoto{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .abouttext{
+    padding-left: 10px;
+    float: left;
+    width: 50%;
+    background-color: rgb(208, 222, 222);
+    text-align: left;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+  }
+    .abouttilte{
+      display: block;
+    }
+    .abouttilte em{
+      font-size: 32px;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: 300;
+    }
+    .abouttilte h3{
+      display: inline-block;
+      margin-right: 12px;
+      font-size: 62px;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: 600;
+  }
+    .biography{
+      font-size: 20px;
+      line-height: 22px;
+      font-family: 'Jost', sans-serif;
+    }
+  h3, em, br{
+    margin: 0;
+    padding: 0;
+  }
+.place{
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+}
+.placename{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -100%);
+  font-size: 37px;
+  color: white;
+  background-color: rgba(69, 58, 58, 0.6);
+  font-weight: 400;
+  font-family: 'Titillium Web', sans-serif;
+  text-shadow: 0px 1px 1px ;
+
+}
+.placesbox{
+  grid-column: 1 / 5;
+  display: grid;
+  height: 100vh;
+  grid-gap: 1px;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows: auto auto;
+}
+  .placesbox .place:first-child{
+  grid-row-start: 1;
+  grid-row-end: 4;
+  }
+  .placesbox .place:nth-child(2){
+  grid-column-start: 2;
+  grid-column-end: 4;
+  }
+
+  .placephoto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+
+.footer{
+  grid-column: 1 / 5;
+}

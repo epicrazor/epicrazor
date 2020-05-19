@@ -20,52 +20,92 @@
 		<!-- Use latest version of IE-->
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<!-- For external styles-->
-			<link rel="stylesheet" href="styles/styles.css"> 
+			<link rel="stylesheet" href="styles/stylescontacts.css">
+			<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;900&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 	</head>
-	<body class="container">
-		<header class="element element-1">Первая попытка верстки</header>
-		<nav class="element element-2">
-			<a href="index.html">Main</a><br>Menu<br>Menu<br>Menu<br>Menu<br>Menu<br>Menu<br>Menu<br>Menu<br>Menu<br>
-		</nav>
-		<aside class="element element-3">Aside</aside>
-		<main class="content">
-			<div class="element-4">Content</div>
-			<div class="element-5">
-	<h1> Forms</h1>
-		<label for="username">Username</label> <input id="username"> <br>
-		<label for="password">Password</label> <input id="password" type="password"><br>
-		<label for="date">Date</label>
-		<input id="date" type="date"> <br> <input type="color">
-	<hr></div>
-		</main>
-		<footer class="element element-6">Footer</footer>
-				
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<!-- <!-- <div class="grid"> 1й Общий урок -->
-		<!-- <div class="grid-item grid-item1">1</div> -->
-		<!-- <div class="grid-item grid-item2">2</div> -->
-		<!-- <div class="grid-item grid-item3">3</div> -->
-		<!-- <div class="grid-item grid-item4">4</div> -->
-		<!-- <div class="grid-item grid-item5">5</div> -->
-		<!-- <div class="grid-item grid-item6">6</div> -->
-		<!-- <div class="grid-item grid-item7">7</div> -->
-		<!-- <div class="grid-item grid-item8">8</div> -->
-		<!-- <div class="grid-item grid-item9">9</div> -->
-		<!-- <div class="grid-item grid-item10">10</div> -->
-		<!-- <div class="grid-item grid-item11">11</div> -->
-	<!-- </div> -->
+	<body>
+																							<!-- ШАПКА САЙТА (ХЕДЕР + МЕНЮ) -->
+		<div class="wrapper grid-container">
+  	<div class="grid-item header">
+			<div class="headertitle"><h1>full of nothing</h1></div>
+			<nav class="menu">
+				<a href="#">Home</a>
+				<a href="#idabout">About</a>
+				<a href="#">Blog</a>
+				<a href="#">Contact</a>
+				<a href="#">Register</a>
+			</nav>
+		</div>
+																				<!-- СЕКЦИЯ ABOUT -->
+	  <div class="grid-item about" id="idabout">
+			<div class="aboutphoto">
+				<img src="images/authorphoto.jpeg" class="authorphoto "alt="Author's photo">
+			</div>
+			<div class="abouttext">
+				<span class="abouttilte"><h3>Jeremy Browson</h3><em>The Traveller</em></span>
+				<article class="biography">I was born in the seaside town of Weston-Super-Mare, south-west England, on 6th September 1978. I was roughly 9 months old when a problem was discovered with my sight. It was eventually realised through an ophthalmologist that I had a rare genetic visual impairment. I was born with Cone Dystrophy and Photo Phobia. This means I have no colour nerves in the back of my eye, greatly exposing my optic nerve to light. Hence, having Photo Phobia (light sensitivity).
+					My first few years of life was spent living in darkness whenever possible. I was eventually given dark glasses that I wore indoors and outside until about the age of fifteen. I played in the street with non-disabled friends, learning to listen for traffic. My street was a cul-de-sac and I knew the traffic came from one direction. I attended a day school for the disabled in Bristol from the age of five. This was a journey of 20 miles (32 kilometres) in a taxi – I was often car sick.
+					By using my light sensitivity, I learnt to read and write. I could see large black lines on white paper. I learnt the alphabet and numeracy. I also learnt to play snooker by detecting the different balls through shade. I had my rods, the nerve cells to help me see black and white images and shade. However, by the age of nine or ten, this light vision was beginning to fade.
+					My eye condition has never changed, but my pain threshold became stronger, and my light sensitivity lessened as print became smaller and more complex. I stopped using my lenses as it became harder to view objects.
+					By the age of ten, I had stopped learning and needed a new medium to continue my education.	When aged approximately four, it was discovered that I was partially deaf in both ears. This could be from a related genetic condition, but it is yet unknown. I was given analogue hearing aids. My hearing has become progressively worse over the years. At present, I am approximately 80% or (severely) deaf without hearing aids. I now wear digital aids, which are fantastic and give me roughly 80% hearing capacity in a one-to-one conversation in a quiet room. This is reduced in crowded places or on streets with busy and noisy traffic.
+					I spent six years at Exhall Grange School in Coventry in the West Midlands. I was given mobility training, whereby I learnt how to use a long white cane to locate objects on the ground, to find drop-downs on curbs in order to cross roads, and ascend and descend steps safely. I learnt to catch public transport, and find locations. I received fantastic training. I was also taught Braille: a blind person’s method of reading and writing through a series of six razed dots in two vertical lines of three.
+				</article>
+			</div>
+		</div>
+
+
+																					<!-- PLACES BOX !!!! -->
+	  <div class="grid-item placesbox">
+			<div class="place">
+				<div class="placephoto">
+					<img src="images/paris.jpg" alt="Paris" />
+				</div>
+				<span class="placename">Paris</span>
+			</div>
+			<div class="place">
+				<div class="placephoto">
+					<img src="images/newyork.jpg" alt="New York" />
+				</div>
+				<div class="placename">New York</div>
+			</div>
+			<div class="place">
+				<div class="placephoto">
+					<img src="images/otzaretta.jpg" alt="Otzaretta" />
+				</div>
+				<div class="placename">Otzaretta</div>
+			</div>
+			<div class="place">
+				<div class="placephoto">
+					<img src="images/himalayas.jpg" alt="Himalayas" />
+				</div>
+				<div class="placename">Himalayas</div>
+			</div>
+			<div class="place">
+				<div class="placephoto">
+					<img src="images/hawaii.jpg" alt="Hawaii" />
+				</div>
+				<div class="placename">Hawaii</div>
+			</div>
+			<div class="place">
+				<div class="placephoto">
+					<img src="images/amazon.jpg" alt="Amazon River" />
+				</div>
+				<div class="placename">Amazon River</div>
+			</div>
+
+		</div>
+	  <div class="grid-item">4</div>
+	  <div class="grid-item">5</div>
+	  <div class="grid-item">6</div>
+	  <div class="grid-item">7</div>
+	  <div class="grid-item">8</div>
+	  <div class="grid-item">9</div>
+		<div class="grid-item">10</div>
+		<div class="grid-item">11</div>
+		<div class="grid-item footer">12</div>
+</div>
+
 	</body>
 </html>
