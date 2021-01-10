@@ -4,6 +4,11 @@
 .aside-left {grid-area: asidel;}
 .aside-right {grid-area: asider;}
 .footer {grid-area: footer;}
+body {
+  background-color: darkred;
+  color: gold;
+  
+}
 .wrapper{
   display: grid;
   height: 100vh;
@@ -163,7 +168,7 @@ span{
   text-align: center;
   font-size: 25px;
   font-weight: bold;
-  
+
 }
 .stat_col{
 	/* display: inline-block; */
