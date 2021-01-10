@@ -7,7 +7,7 @@ body{
 }
 .wrapper {
   display: grid;
-  grid-template-columns:minmax(375px,auto) minmax(375px,auto) minmax(375px,auto);
+  grid-template-columns:minmax(175px,auto) minmax(175px,auto) minmax(175px,auto);
   grid-template-rows: 100vh auto auto auto;
   background-color: ;
   padding:0px;
@@ -32,7 +32,9 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
   position: relative;
+
 }
   .headertitle{
     text-align: center;

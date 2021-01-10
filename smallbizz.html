@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- Document title in browser tabs -->
+			<title>SmallBizZZ | Home</title>
+			<link rel ="shortcut icon" href="icon.ico" type="image/x-icon">
+		<!-- Additional approach to add favicon -->
+			<link rel="apple-touch-icon" href ="icon.ico">
+			<link rel="apple-touch-icon" sizes="72x72" href ="icon.ico">
+			<link rel="apple-touch-icon" sizes="114x114" href ="icon.ico">
+		<!-- SEO -->
+			<meta name="description" content="Test web page">
+			<meta name="keywords" content="epicrazor github, eztizzy">
+			<meta name="author" content="alex.lych@outlook.com">
+		<!-- For mobile devices -->
+			<meta name="viewport" content="width=device-width" initial-scale="1">
+		<!--For mobile & no resize -->
+			<meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no">
+		<!-- Use latest version of IE-->
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- For external styles-->
+			<link rel="stylesheet" href="styles/stylebizz.css">
+			<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;900&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+	</head>
+<body>
+
+
+
+
+
+
+
+	<div class="wrapper">
+		<div class="firstsection grid-item">
+			<div class="firstsectionbg">
+				<div class="firstsectionmask"></div>
+				<div class="nav-container">
+					<nav>
+						<a href="#">Home</a>
+						<a href="#">What is DoubleTree?</a>
+						<a href="#">Rooms</a>
+						<a href="#">Conference & Banquet Halls</a>
+						<a href="#">Restaurant/ Bar</a>
+						<a href="#">Spa & Wellness</a>
+						<a href="#">Contact</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+							<!-- stats and numbers section 2nd -->
+		<div class="secondsection grid-item">
+			<article class="feature grid-item">
+				<span class="featuretitle">
+					<h3>ROOMS</h3>
+				<span>
+			</article>
+			<article class="feature grid-item">
+				SPA & WELLNESS
+			</article>
+			<article class="feature grid-item">
+				Restaurant
+			</article>
+			<article class="feature grid-item">
+				Conferences
+			</article>
+			<article class="feature grid-item">
+				Banquets
+			</article>
+
+		</div>
+									<!-- SLIDESHOW START -->
+
+<div class="slidessection grid-item">
+			<div class="slideshow-container ">
+				<div class="mySlides fade">
+	  		<div class="numbertext">1 / 6</div>
+	  		<img src="images/dtbh/room.jpg" style="width:100%">
+	  		<div class="text">Luxury rooms</div>
+			</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">2 / 6</div>
+			  <img src="images/dtbh/room6.jpg" style="width:100%">
+			  <div class="text">Apartments</div>
+			</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">3 / 6</div>
+			  <img src="images/dtbh/swimpool2.jpg" style="width:100%">
+			  <div class="text">Swimming pool & SPA</div>
+			</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">4 / 6</div>
+			  <img src="images/dtbh/wedding.jpg" style="width:100%">
+			  <div class="text">Banquets</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">5 / 6</div>
+				<img src="images/dtbh/krakow.jpg" style="width:100%">
+			 	<div class="text">Conferences</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">6 / 6</div>
+				<img src="images/dtbh/restaurant.jpg" style="width:100%">
+			 	<div class="text">Restaurant</div>
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			</div>
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span>
+		  <span class="dot" onclick="currentSlide(2)"></span>
+		  <span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+			<span class="dot" onclick="currentSlide(6)"></span>
+		</div>
+		</div>
+	</div>
+
+	<!-- slideshow script -->
+<script>
+	var slideIndex = 1;
+		showSlides(slideIndex);
+
+	function plusSlides(n) {
+  	showSlides(slideIndex += n);
+		}
+
+	function currentSlide(n) {
+  	showSlides(slideIndex = n);
+		}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	}
+</script>
+
+<!-- slideshow END -->
+
+</body>
+</html>
