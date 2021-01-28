@@ -1,0 +1,211 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*end of tht RESET*/
+
+/*************************
+Base Styles
+*************************/
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica, Helvetica Neue, Arial;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+
+/* 
+----------HEADER STYLING. start------------
+*/
+.main-header {
+  height: 80px;
+  width: 80%;
+  display: -webkit-flex;
+  margin: 0 auto;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  max-width: 1280px;
+  font-size: 10px;
+  z-index: 100;
+  background: white;
+  border-bottom: solid 2px #f4f1eb;
+  overflow: hidden;
+}
+.main-header div {
+  display: inline-block;
+}
+  .top-menu-header {
+    width:100%;
+    height: 80px;
+  }
+    .header-logo {
+      width: 34%;
+      justify-content: center;
+      text-align: center;
+    }
+      .header-logo a {
+        display: -webkit-flex;
+        float: left;
+        align-items: center;
+        height: 100%;
+        height: 80px;
+        text-decoration: none;
+      }
+        .header-logo figure {
+          display: block;
+          margin:0;
+          padding:0;
+
+        }
+          .header-logo img {
+            width: 62px;
+
+          }
+        .logo-text h1 {
+          font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+          font-size: 32px;
+          margin: 0;
+          font-weight: 200;
+          color:#011746;
+        }
+        .logo-text p {
+          font-size: 18px;
+          font-weight: 400;
+          color: #85bc22;
+        }
+
+        .navigation {
+          width: 40%;
+          display: block;
+          min-height: 80px;
+          text-align: center;
+          
+        }
+          .navigation a {
+            float: left;
+            width: 25%;
+            display: inline-block;
+            line-height: 80px;
+            text-align: center;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+
+        .user-buttons {
+          display: block;
+          min-height: 80px;
+          width: 25%;
+          
+          /* float: right;
+          text-align: center;
+          justify-content:center;
+          align-content: center; */
+         
+         
+         
+
+        }
+        .user-buttons i {
+          width: 25%;
+          color: lightgrey;
+          font-weight:100;
+          font-size: 30px;
+          line-height: 80px;
+          
+          float:left;
+          text-align: center;
+        }
+
+
+
+/* 
+----------HEADER STYLING. end------------
+*/
+
+ 
+
+
+
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+/*
+.clearfix {
+  *zoom: 1;
+}
+ */
