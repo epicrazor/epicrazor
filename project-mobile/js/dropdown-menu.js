@@ -1,6 +1,6 @@
 function menuIconChange(x) {
     var dropdown = document.getElementsByClassName("dropbtn");
-    var i;
+    
     
     x.classList.toggle("change");
     if(x.classList.contains("change")) {

@@ -1,17 +1,17 @@
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlidesTop(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlidesTop(slideIndex += n);
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlidesTop(slideIndex = n);
 }
 
-function showSlides(n) {
+function showSlidesTop(n) {
   var i;
   var slides = document.getElementsByClassName("slide");
   var dots = document.getElementsByClassName("dot");

@@ -32,15 +32,17 @@
 <body>
     <div class="wrapper">
         <header id="header">
-            <a href="#" onclick="myFunction1(this)" class="a-menu">
-                <div class="menu-icon">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
-            </a>
+            
             
             <div class="header-logo">
+                <a href="#" onclick="menuIconChange(this)" class="a-menu unchange">
+                    <div class="menu-icon">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </a>
+
                 <a href="#">
                     <img src="img/logo.svg" alt="Osf Academy Logo">
                     <span class="osf-academy hide-mobile">
@@ -49,23 +51,76 @@
                     </span>
                 </a>
             </div>
+
             
-            <nav class="menu hide-mobile">
+            
+            <nav id="menu" class="menu hide-mobile">
                 <ul>
-                    <li><a href="#" class="menu-item">Services</a></li>
-                    <li><a href="#" class="menu-item">Company</a></li>
-                    <li><a href="#" class="menu-item">Library</a></li>
-                    <li><a href="#" class="menu-item">Contact us</a></li>
-                    <li><a href="#" class="switch">EN &#9662</a></li>
-                    <li><a href="#" class="switch">$ US &#9662</a></li>
+                    <li><a href="#" id="dropbtn" class="menu-item dropbtn extend">Services</a>
+                        
+                        <ul id="megaMenu" class="megamenu hide">
+                            <li class="category"><a href="#" class="menu-item dropbtn">Product categories</a>
+                                <ul class="misc1 hide">
+                                    <li><a href="#" class="">Accessories</a></li>
+                                    <li><a href="#" class="">Alcohol</a></li>
+                                    <li><a href="#" class="">Art</a></li>
+                                    <li><a href="#" class="">Books</a></li>
+                                    <li><a href="#" class="">Drink</a></li>
+                                    <li><a href="#" class="">Electronics</a></li>
+                                    <li><a href="#" class="">Flowers &amp; Plants</a></li>
+                                    <li><a href="#" class="">Food</a></li>
+                                    <li><a href="#" class="">Gadgets</a></li>
+                                    <li><a href="#" class="">Garden</a></li>
+                                    <li><a href="#" class="">Grocery</a></li>
+                                    <li><a href="#" class="">Home</a></li>
+                                    <li><a href="#" class="">Jewelry</a></li>
+                                    <li><a href="#" class="">Kids &amp; Baby</a></li>
+                                    <li><a href="#" class="">Men's Fashion</a></li>
+                                    <li><a href="#" class="">Mobile</a></li>
+                                    <li><a href="#" class="">Motorcycles</a></li>
+                                    <li><a href="#" class="">Movies</a></li>
+                                    <li><a href="#" class="">Music</a></li>
+                                    <li><a href="#" class="">Office</a></li>
+                                    <li><a href="#" class="">Pets</a></li>
+                                    <li><a href="#" class="">Romantic</a></li>
+                                    <li><a href="#" class="">Sport</a></li>
+                                    <li><a href="#" class="">Toys</a></li>                                    
+                                </ul>
+                            </li>
+                            <li class="category-sale"><a href="#" class="menu-item dropbtn">Sale</a>
+                                <ul class="misc hide">
+                                    <li><a href="#" class="">Accessories</a></li>
+                                    <li><a href="#" class="">Alcohol</a></li>
+                                    <li><a href="#" class="">Art</a></li>
+                                    <li><a href="#" class="">Books</a></li>
+                                    <li><a href="#" class="">Drink</a></li>
+                                    <li><a href="#" class="">Electronics</a></li>
+                                    <li><a href="#" class="">Flowers &amp; Plants</a></li>
+                                    <li><a href="#" class="">Food</a></li>
+                                </ul>
+                            </li>
+                            <div class="megamenu-image hide-mobile">
+                                <img src="img/girl-slider.png" alt="444">
+                            </div>
+                        </ul>
+                        
+
+
+                    </li>
+                    <li><a href="404.html" class="extend">Company</a></li>
+                    <li><a href="404.html" class="extend">Library</a></li>
+                    <li><a href="404.html" class="extend">Contact us</a></li>
+                    <li><a href="404.html" class="switch hide-mobile">EN &#9662</a></li>
+                    <li><a href="404.html" class="switch hide-mobile">$ US &#9662</a></li>
                 </ul>
+                <img src="img/mobile-menu-girl.jpg" alt="picture of girl">
             </nav>
 
             <div class="user-buttons hide-mobile">              
-                <a href="#"><i class="bi bi-search"></i></a>
-                <a href="#"><i class="bi bi-person"></i></a>
-                <a href="#"><i class="bi bi-heart"></i><span class="badge">4</span></a>
-                <a href="#"><i class="bi bi-bag-check"></i><span class="badge">4</span></a>
+                <a href="404.html"><i class="bi bi-search"></i></a>
+                <a href="404.html"><i class="bi bi-person"></i></a>
+                <a href="404.html"><i class="bi bi-heart"></i><span class="badge">0</span></a>
+                <a href="404.html"><i class="bi bi-bag-check"></i><span class="badge">0</span></a>
                 
                 
                 
@@ -96,9 +151,14 @@
 
                     <p><a href="index.html">Go back to Homepage</a></p>
                     <div class="search-container">
-                        <h3>Search our suite</h3>
-                    </div>   
+                        <h3>Search our site!</h3>
+                        <form action="#">
+                          <input type="text" placeholder="Search.." name="search">
+                          <button type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                      </div>   
                 </div>
+
              </div>
             
         </main>        
@@ -159,7 +219,7 @@
             
                 
             </div>
-            <p class="copyright" style="margin-top: 30px; text-align: center; font-size: 12px; font-weight: 400;">&copy; Copyright 2021. All rights reserved.</p>
+            <p id="copyright" class="copyright" style="margin-top: 30px; text-align: center; font-size: 12px; font-weight: 400;"></p>
             
             <div class="social-links">
                 <a href="#"><img src="img/social-facebook.svg" alt="facebook"></a>
@@ -170,12 +230,10 @@
 
         </footer>
     </div>
-    <script>
-        function myFunction1(x) {
-          x.classList.toggle("change");
-        }
-    </script>
-    <script src="js/details.js"></script>
+    <script src="js/dropdown-menu.js"></script>
     <script src="js/header-sticky.js"></script>
+    <script src="js/normalize-menu.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/year.js"></script>
 </body>
 </html>

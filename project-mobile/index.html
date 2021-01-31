@@ -29,6 +29,30 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
 <body>
+    <div id="loginBox" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+         
+            <span onclick="document.getElementById('loginBox').style.display='none'" class="close" title="Close Modal">&times;</span>
+            
+         
+            <h2>Sign In</h2>
+          <div class="container">
+            <label for="email"><b>Username</b></label>
+            <input type="email" placeholder="Enter E-mail" name="email" required>
+      
+            <label for="psw"><b>Password</b><span class="psw">Forgot <a href="#">password?</a></span>
+            <input type="password" id="password" placeholder="Enter Password" name="psw" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Password must contain: At least 6 characters length, contain 1 numeric, 1 uppercase letter, 1 special character"><i class="bi bi-eye pass-icon" onclick="togglePass()"></i></label>
+              
+            <button type="submit">Login</button>
+            
+            <a href="#" class="noaccount">I don't have an account</a>  
+            
+          </div>
+      
+          
+        </form>
+      </div>
     <div class="wrapper">
         <header id="header">
             
@@ -117,9 +141,9 @@
 
             <div class="user-buttons hide-mobile">              
                 <a href="404.html"><i class="bi bi-search"></i></a>
-                <a href="404.html"><i class="bi bi-person"></i></a>
-                <a href="404.html"><i class="bi bi-heart"></i><span class="badge">4</span></a>
-                <a href="404.html"><i class="bi bi-bag-check"></i><span class="badge">4</span></a>
+                <a onclick="document.getElementById('loginBox').style.display='block'" class="login-a"><i class="bi bi-person"></i></a>
+                <a href="404.html"><i class="bi bi-heart"></i><span id="js-wishlist" class="badge">0</span></a>
+                <a href="404.html"><i class="bi bi-bag-check"></i><span id="js-cart" class="badge">0</span></a>
                 
                 
                 
@@ -143,7 +167,7 @@
                     <p class="text">Improve business performance and the user experience with the right mix of IoT technology and processes
                         doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
                         <div class="btn-center">
-                            <button class="btn-more">VIEW MORE</button>
+                            <button class="btn-more"><a href="clp.html">VIEW MORE</a></button>
                         </div>
                     </div>
                 
@@ -207,18 +231,22 @@
         
         <!-- popular-items start -->
         
-            <div class="popular-items">
+            <div class="popular-items" id="products">
                 <h2>Popular items</h2>
-                <a href="404.html">
+                <a>
                     <figure class="product-item">
                         <img src="img/product1.png" alt="">
                         <figcaption class="product-label">
                             <p>Kristina Dam Oak Table With White Marble Top</p>
                             <p class="price">$100</p>
+                            <div class="btns-hover">
+                                <button class="to-cart-btn" type="button" onclick="cartPlus()"><i class="bi bi-plus"></i></button>
+                                <button class="to-wishlist-btn" id="tstbtn" onclick="wishPlus()" type="button"><i class="bi bi-heart-fill"></i></button>
+                            </div>
                         </figcaption>
                     </figure>
                 </a>
-                <a href="404.html" class="hide-mobile">
+                <a href="pdp.html" class="hide-mobile">
                     <figure class="product-item">
                         <img src="img/product2.png" alt="">
                         <figcaption class="product-label">
@@ -233,93 +261,28 @@
                         <figcaption class="product-label">
                             <p>Activate Facial Mask and Charcoal Soap </p>
                             <p class="price">$129.55</p>
+                            <div class="btns-hover">
+                                <button class="to-cart-btn" type="button"><i class="bi bi-plus"></i></button>
+                                <button class="to-wishlist-btn" type="button"><i class="bi bi-heart-fill"></i></button>
+                            </div>
                         </figcaption>
                     </figure>
                 </a>
                 <a href="404.html" class="hide-mobile">
                     <figure class="product-item">
-                        <img src="img/product4.png" alt="">
-                        <figcaption class="product-label">
-                            <p>Cocktail Table Walnut <br> |YES</p>
-                            <p class="price">$100</p>
-                        </figcaption>
+                        <img src="img/product4.png" style="max-height: 365px" alt="">
+                        <div class="product-static">
+                            <span class="message-text">
+                                <p>My dragons are misbehaving again. Unbelievable!</p>
+                                <p><i class="bi bi-chat-quote-fill"></i>5H AGO</p>
+                            </span>
+                        </div>
                     </figure>
                 </a>
-                <a href="404.html" class="hide-mobile">
-                    <figure class="product-item">
-                        <img src="img/product5.png" alt="">
-                        <figcaption class="product-label">
-                            <p>Hay - About A Lounge Chair AAL 93</p>
-                            <p class="price">$659.55</p>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="404.html" class="hide-mobile">
-                    <figure class="product-item">
-                        <img src="img/product6.png" alt="">
-                        <figcaption class="product-label">
-                            <p>TORY DESK CALENDAR</p>
-                            <p class="price">$410.99</p>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="404.html" class="hide-mobile">
-                    <figure class="product-item">
-                        <img src="img/product7.png" alt="">
-                        <figcaption class="product-label">
-                            <p>CH445 Wing Chair on SUITE NY</p>
-                            <p class="price">$330.55</p>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="404.html" class="hide-mobile">
-                    <figure class="product-item">
-                        <img src="img/product8.png" alt="">
-                        <figcaption class="product-label">
-                            <p>Kristina Dam Oak Table With White Marble Top</p>
-                            <p class="price">$100</p>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="404.html" class="item-to-load hide-mobile">
-                    <figure class="product-item">
-                        <img src="img/product9.png" alt="">
-                        <figcaption class="product-label">
-                            <p>Kristina Dam Oak Table With White Marble Top</p>
-                            <p class="price">$100</p>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="404.html" class="item-to-load hide-mobile">
-                    <figure class="product-item">
-                        <img src="img/product10.png" alt="">
-                        <figcaption class="product-label">
-                            <p>Kristina Dam Oak Table With White Marble Top</p>
-                            <p class="price">$100</p>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="404.html" class="item-to-load hide-mobile">
-                    <figure class="product-item">
-                        <img src="img/product11.png" alt="">
-                        <figcaption class="product-label">
-                            <p>Kristina Dam Oak Table With White Marble Top</p>
-                            <p class="price">$100</p>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="404.html" class="item-to-load hide-mobile">
-                    <figure class="product-item">
-                        <img src="img/product12.png" alt="">
-                        <figcaption class="product-label">
-                            <p>Kristina Dam Oak Table With White Marble Top</p>
-                            <p class="price">$100</p>
-                        </figcaption>
-                    </figure>
-                </a>
-                <button id="load-more-btn" class="hide-mobile">
-                    <span>Load More</span> <span>&orarr;</span>
-                </button>
+                <button id="load-more-btn" class="hide-mobile">LOAD MORE</button>
+                
+                
+                
 
 
             </div>  <!-- popular-items end -->
@@ -336,7 +299,74 @@
                         </figcaption>
                     </figure>
                 </div>
-            
+
+                
+            <div  class="featured-products hide-mobile">
+                <div   class="product-slider">
+                    <h2>Featured Products</h2>
+                    <div id="featured" class="prSlide tofade">
+                        <figure>
+                            <img src="img/product5.png" alt="">
+                            <figcaption>
+                                <p>Name</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product6.png" alt="">
+                            <figcaption>
+                                <p>Name</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product7.png" alt="">
+                            <figcaption>
+                                <p>Name</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product8.png" alt="">
+                            <figcaption>
+                                <p>Name</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div id="featured2" class="prSlide tofade">
+                        <figure>
+                            <img src="img/product9.png" alt="">
+                            <figcaption>
+                                <p>Name2</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product10.png" alt="">
+                            <figcaption>
+                                <p>Name2</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product11.png" alt="">
+                            <figcaption>
+                                <p>Name2</p>
+                                <p>Price2</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product12.png" alt="">
+                            <figcaption>
+                                <p>Name2</p>
+                                <p>Price2</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    
+                </div>
+            </div>
 
 
             <div class="benefits">
@@ -439,7 +469,7 @@
             
                 
             </div>
-            <p class="copyright" style="margin-top: 30px; text-align: center; font-size: 12px; font-weight: 400;">&copy; Copyright 2021. All rights reserved.</p>
+            <p id="copyright" class="copyright" style="margin-top: 30px; text-align: center; font-size: 12px; font-weight: 400;"></p>
             
             <div class="social-links">
                 <a href="404.html"><img src="img/social-facebook.svg" alt="facebook"></a>
@@ -450,6 +480,16 @@
 
         </footer>
     </div>
+    <div class="modalcookie hidden" id="modalcookie" >
+        <div id="cookies-container">
+            <h4>This website uses cookies <span onclick="document.getElementById('modalcookie').style.display='none'" class="x" title="Close Cookies">&times;</span></h4>
+            <p>OSF uses its own and third-party cookies for statistical purposes.
+                If You continue browsing, we consider that you accept its use. <br>
+                You can expand this information consulting our <a href="#">Cookies Policy Page</a>.
+                <button id="accept">Accept</button>
+            </p>
+        </div>
+    </div>
 
     <!-- <script>
         function menuIconChange(x) {
@@ -457,14 +497,21 @@
         }
     </script> -->
     <script>
-    function dTwo() {
-        document.getElementById('dropdownTwo').classList.remove('hide-mobile');
-        }
-        </script>
+        function dTwo() {
+            document.getElementById('dropdownTwo').classList.remove('hide-mobile');
+            }
+    </script>
+    <script src="js/loadmore.js"></script>
     <script src="js/slideshow-container.js"></script>
-    <script src="js/normalize-menu.js"></script>
-    <script src="js/details.js"></script>
+    <script src="js/featured-slider.js"></script>
+    <script src="js/addtocart.js"></script>
+    
+    <script src="js/login.js"></script>
     <script src="js/dropdown-menu.js"></script>
     <script src="js/header-sticky.js"></script>
+    <script src="js/normalize-menu.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/year.js"></script>
+    <script src="js/cookies.js"></script>
 </body>
 </html>

@@ -186,6 +186,7 @@ font-weight: 400;
     width: 160px;
     padding-left: 15px;
     background-color: transparent;
+    cursor: pointer;
 
   }
   
@@ -196,6 +197,7 @@ font-weight: 400;
     background-color: #fff;
     outline: none;
     border: none;
+    cursor: pointer;
     
     
     
@@ -240,6 +242,7 @@ font-weight: 400;
     border-radius: 95px;
     padding: 5 20px 5 20px;
     width: 160px;
+    cursor: pointer;
   }
 
   .description .more-text{

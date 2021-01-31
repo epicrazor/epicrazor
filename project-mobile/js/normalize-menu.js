@@ -1,27 +1,32 @@
 if (767 < window.screen.width) {  
   document.getElementById("menu").classList.remove('mobile-menu');
 
-//   var btn = document.getElementById("dropbtn");
-//   btn.setAttribute("onmouseover","openMega(event)");
-//   btn.setAttribute("onmouseout","closeMega(event)");
+  var btnunhide = document.getElementById("dropbtn");
+  var btnhide = document.getElementById("megaMenu");
+
+  btnunhide.setAttribute("onmouseover","openMega(event)");
+  btnhide.setAttribute("onmouseleave","closeMega(event)");
  
   
-// function openMega(event){
-//   var unhide = document.getElementById("megaMenu");
-//   unhide.classList.remove("hide");
-//   console.log("open");
- 
-
-// }
-
-// function closeMega(event){
-//   var hide = document.getElementById("megaMenu");
-//   hide.classList.add("hide");
-//   console.log("close");
-// }
 
 
-
+  function openMega(event){
+    var unhide = document.getElementById("megaMenu");
+    
+    unhide.style.display = "grid";
+    console.log("open");
+   
+  
+  }
+  
+  function closeMega(event){
+    var hide = document.getElementById("megaMenu");
+    hide.style.display = "none";
+    console.log("close");
+  }
 
 
 }
+
+
+
