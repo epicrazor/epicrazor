@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Document title in browser tabs -->
+        <title>Project-OSF | Home</title>
+        <link rel ="shortcut icon" href="icon.ico" type="image/x-icon">
+    <!-- Additional approach to add favicon -->
+        <link rel="apple-touch-icon" href ="icon.ico">
+        <link rel="apple-touch-icon" sizes="72x72" href ="icon.ico">
+        <link rel="apple-touch-icon" sizes="114x114" href ="icon.ico">
+    <!-- SEO -->
+        <meta name="description" content="Test web page">
+        <meta name="keywords" content="frontend, html, css, javascript">
+        <meta name="author" content="alexL">
+    <!-- For mobile devices -->
+        <meta name="viewport" content="width=device-width" initial-scale="1">
+    <!--For mobile & no resize -->
+        <meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no">
+    <!-- Use latest version of IE-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- For external styles-->
+        <script src="https://kit.fontawesome.com/1d5b31a841.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div id="loginBox" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+         
+            <span onclick="document.getElementById('loginBox').style.display='none'" class="close" title="Close Modal">&times;</span>
+            
+         
+            <h2>Sign In</h2>
+          <div class="container">
+            <label for="email"><b>Username</b></label>
+            <input type="email" placeholder="Enter E-mail" name="email" required>
+      
+            <label for="psw"><b>Password</b><span class="psw">Forgot <a href="#">password?</a></span>
+            <input type="password" id="password" placeholder="Enter Password" name="psw" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Password must contain: At least 6 characters length, contain 1 numeric, 1 uppercase letter, 1 special character"><i class="bi bi-eye pass-icon" onclick="togglePass()"></i></label>
+              
+            <button type="submit">Login</button>
+            
+            <a href="#" class="noaccount">I don't have an account</a>  
+            
+          </div>
+      
+          
+        </form>
+      </div>
+    <div class="wrapper">
+        <header id="header">
+            
+            
+            <div class="header-logo">
+                <a href="#" onclick="menuIconChange(this)" class="a-menu unchange">
+                    <div class="menu-icon">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <img src="img/logo.svg" alt="Osf Academy Logo">
+                    <span class="osf-academy hide-mobile">
+                        <h1>OSF</h1>
+                        <span>Academy</span>
+                    </span>
+                </a>
+            </div>
+
+            
+            
+            <nav id="menu" class="menu hide-mobile">
+                <ul>
+                    <li><a href="#" id="dropbtn" class="menu-item dropbtn extend">Services</a>
+                        
+                        <ul id="megaMenu" class="megamenu hide">
+                            <li class="category"><a href="#" class="menu-item dropbtn">Product categories</a>
+                                <ul class="misc1 hide">
+                                    <li><a href="#" class="">Accessories</a></li>
+                                    <li><a href="#" class="">Alcohol</a></li>
+                                    <li><a href="#" class="">Art</a></li>
+                                    <li><a href="#" class="">Books</a></li>
+                                    <li><a href="#" class="">Drink</a></li>
+                                    <li><a href="#" class="">Electronics</a></li>
+                                    <li><a href="#" class="">Flowers &amp; Plants</a></li>
+                                    <li><a href="#" class="">Food</a></li>
+                                    <li><a href="#" class="">Gadgets</a></li>
+                                    <li><a href="#" class="">Garden</a></li>
+                                    <li><a href="#" class="">Grocery</a></li>
+                                    <li><a href="#" class="">Home</a></li>
+                                    <li><a href="#" class="">Jewelry</a></li>
+                                    <li><a href="#" class="">Kids &amp; Baby</a></li>
+                                    <li><a href="#" class="">Men's Fashion</a></li>
+                                    <li><a href="#" class="">Mobile</a></li>
+                                    <li><a href="#" class="">Motorcycles</a></li>
+                                    <li><a href="#" class="">Movies</a></li>
+                                    <li><a href="#" class="">Music</a></li>
+                                    <li><a href="#" class="">Office</a></li>
+                                    <li><a href="#" class="">Pets</a></li>
+                                    <li><a href="#" class="">Romantic</a></li>
+                                    <li><a href="#" class="">Sport</a></li>
+                                    <li><a href="#" class="">Toys</a></li>                                    
+                                </ul>
+                            </li>
+                            <li class="category-sale"><a href="#" class="menu-item dropbtn">Sale</a>
+                                <ul class="misc hide">
+                                    <li><a href="#" class="">Accessories</a></li>
+                                    <li><a href="#" class="">Alcohol</a></li>
+                                    <li><a href="#" class="">Art</a></li>
+                                    <li><a href="#" class="">Books</a></li>
+                                    <li><a href="#" class="">Drink</a></li>
+                                    <li><a href="#" class="">Electronics</a></li>
+                                    <li><a href="#" class="">Flowers &amp; Plants</a></li>
+                                    <li><a href="#" class="">Food</a></li>
+                                </ul>
+                            </li>
+                            <div class="megamenu-image hide-mobile">
+                                <img src="img/girl-slider.png" alt="444">
+                            </div>
+                        </ul>
+                        
+
+
+                    </li>
+                    <li><a href="404.html" class="extend">Company</a></li>
+                    <li><a href="404.html" class="extend">Library</a></li>
+                    <li><a href="404.html" class="extend">Contact us</a></li>
+                    <li><a href="404.html" class="switch hide-mobile">EN &#9662</a></li>
+                    <li><a href="404.html" class="switch hide-mobile">$ US &#9662</a></li>
+                </ul>
+                <img src="img/mobile-menu-girl.jpg" alt="picture of girl">
+            </nav>
+
+            <div class="user-buttons hide-mobile">              
+                <a href="404.html"><i class="bi bi-search"></i></a>
+                <a onclick="document.getElementById('loginBox').style.display='block'" class="login-a"><i class="bi bi-person"></i></a>
+                <a href="404.html"><i class="bi bi-heart"></i><span id="js-wishlist" class="badge">0</span></a>
+                <a href="404.html"><i class="bi bi-bag-check"></i><span id="js-cart" class="badge">0</span></a>
+                
+                
+                
+            </div>
+        </header>
+
+
+
+
+        <main>
+        <!-- Slideshow container -->
+            <div class="slideshow">
+                <div class="slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="slide fade">
+                    <div class="slide-heading">
+                        <h2>Control and manage any device with cloud solutions</h2>
+                    </div>
+                    <img  class="slider-img-mobile"  src="img/girl-slider.png" alt="girl on a slide">
+                    <img  class="slider-img-responsive hide-mobile" src="img/slider-image.png" alt="bags on a slide">
+                    <p class="text">Improve business performance and the user experience with the right mix of IoT technology and processes
+                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
+                        <div class="btn-center">
+                            <button class="btn-more"><a href="clp.html">VIEW MORE</a></button>
+                        </div>
+                    </div>
+                
+                    <div class="slide fade">
+                    <div class="slide-heading">
+                        <h2>2Control and manage any device with cloud solutions</h2>
+                    </div>
+                    <img class="slider-img-mobile" src="img/girl-slider2.png">
+                    <img  class="slider-img-responsive hide-mobile" src="img/slider-image2.png" alt="bags on a slide">
+                    <p class="text">2Improve business performance and the user experience with the right mix of IoT technology and processes
+                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
+                        <div class="btn-center">
+                            <button class="btn-more">VIEW MORE</button>
+                        </div>
+                    </div>
+                
+                    <div class="slide fade">
+                    <div class="slide-heading">
+                        <h2>3Control and manage any device with cloud solutions</h2>
+                    </div>
+                    <img class="slider-img-mobile" src="img/girl-slider.png">
+                    <img  class="slider-img-responsive hide-mobile" src="img/slider-image3.png" alt="bags on a slide">
+                    <p class="text">3Improve business performance and the user experience with the right mix of IoT technology and processes
+                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
+                        <div class="btn-center">
+                            <button class="btn-more">VIEW MORE</button>
+                        </div>
+                    </div>
+                
+                    <!-- Next and previous buttons -->
+                    
+                    <!-- The dots/circles -->
+                    <div class="dots" style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- slideshow end -->
+
+
+            <!-- aside start -->
+            <aside class="hide-mobile">
+                <div class="aside-section sales">
+                    <div class="sales-container">
+                        <h2>55&percnt;</h2>
+                        <p>Summer <br> Sales</p>
+                    </div>
+                    <img src="img/palm.svg" alt="palm" class="palm">
+                </div>
+                <div class="aside-section social">
+                    <h4>Follow us on Facebook</h4> 
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit </p>
+                    <button class="follow-btn"><i class="fab fa-facebook-f"></i>FOLLOW</button>
+                </div>
+            </aside>
+            <!-- aside end -->
+
+
+        
+        <!-- popular-items start -->
+        
+            <div class="popular-items" id="products">
+                <h2>Popular items</h2>
+                <a>
+                    <figure class="product-item">
+                        <img src="img/product1.png" alt="">
+                        <figcaption class="product-label">
+                            <p>Kristina Dam Oak Table With White Marble Top</p>
+                            <p class="price">$100</p>
+                            <div class="btns-hover">
+                                <button class="to-cart-btn" type="button" onclick="cartPlus()"><i class="bi bi-plus"></i></button>
+                                <button class="to-wishlist-btn" id="tstbtn" onclick="wishPlus()" type="button"><i class="bi bi-heart-fill"></i></button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="pdp.html" class="hide-mobile">
+                    <figure class="product-item">
+                        <img src="img/product2.png" alt="">
+                        <figcaption class="product-label">
+                            <p>Hay - About A Lounge Chair AAL 93</p>
+                            <p class="price">$659.55</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="404.html" class="hide-mobile">
+                    <figure class="product-item">
+                        <img src="img/product3.png" alt="">
+                        <figcaption class="product-label">
+                            <p>Activate Facial Mask and Charcoal Soap </p>
+                            <p class="price">$129.55</p>
+                            <div class="btns-hover">
+                                <button class="to-cart-btn" type="button"><i class="bi bi-plus"></i></button>
+                                <button class="to-wishlist-btn" type="button"><i class="bi bi-heart-fill"></i></button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="404.html" class="hide-mobile">
+                    <figure class="product-item">
+                        <img src="img/product4.png" style="max-height: 365px" alt="">
+                        <div class="product-static">
+                            <span class="message-text">
+                                <p>My dragons are misbehaving again. Unbelievable!</p>
+                                <p><i class="bi bi-chat-quote-fill"></i>5H AGO</p>
+                            </span>
+                        </div>
+                    </figure>
+                </a>
+                <button id="load-more-btn" class="hide-mobile">LOAD MORE</button>
+                
+                
+                
+
+
+            </div>  <!-- popular-items end -->
+
+
+
+            
+                <div class="banner">
+                    <figure>
+                        <img src="img/Layer_148.png" alt="">
+                        <figcaption>
+                            <h3>Banner OSF Theme</h3>
+                            <span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                
+            <div  class="featured-products hide-mobile">
+                <div   class="product-slider">
+                    <h2>Featured Products</h2>
+                    <div id="featured" class="prSlide tofade">
+                        <figure>
+                            <img src="img/product5.png" alt="">
+                            <figcaption>
+                                <p>Name</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product6.png" alt="">
+                            <figcaption>
+                                <p>Name</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product7.png" alt="">
+                            <figcaption>
+                                <p>Name</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product8.png" alt="">
+                            <figcaption>
+                                <p>Name</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div id="featured2" class="prSlide tofade">
+                        <figure>
+                            <img src="img/product9.png" alt="">
+                            <figcaption>
+                                <p>Name2</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product10.png" alt="">
+                            <figcaption>
+                                <p>Name2</p>
+                                <p>Price</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product11.png" alt="">
+                            <figcaption>
+                                <p>Name2</p>
+                                <p>Price2</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/product12.png" alt="">
+                            <figcaption>
+                                <p>Name2</p>
+                                <p>Price2</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="benefits">
+                
+                <div class="benefit1">
+                    <img src="img/cart.svg" alt="cart">
+                </div>
+
+                <div class="benefit2">
+                    <div class="bnf-content">
+                        <h4 class="bnf-heading">Focus</h4>
+                        <p class="bnf-text">Our unwavering focus on superior service delivery and building next generation competencies</p>
+                    </div>
+                </div>
+
+                <div class="benefit3">
+                    <div class="bnf-content">
+                        <h4 class="bnf-heading">Method</h4>
+                        <p class="bnf-text">A standardized methodology designed to deliver measurable business results and predictable costs</p>
+                    </div>
+
+                </div>
+
+                <div class="benefit4">
+                    <img src="img/recycle.svg" alt="recycle">
+                </div>
+
+                <div class="benefit5">
+                    <img src="img/notebook.svg" alt="notebook">
+                </div>
+
+                <div class="benefit6">
+                    <div class="bnf-content">
+                        <h4 class="bnf-heading">Knowledge</h4>
+                        <p class="bnf-text">A highly skilled, proactive workforce that reliably improves each client’s ROI while mitigating their business risk</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </main>
+        
+        <footer>
+            <div class="footer-content">  
+                <div class="cont-info">
+                      
+                    <details>
+                        <summary ><span>CONTACT</span></summary>
+                        <address>                    
+                        Headquarters:<br>
+                        5600, Blvd. des Galeries, Bur 530<br>
+                        Quebec, Quebec G2K 2H6<br> <br>
+                        <a href="mailto:webmaster@example.com"><i class="bi bi-envelope" style="padding-right: 5px;"></i> osf-global.com</a>.<br><br> 
+                        <a href="tel:+18885484344"><i class="bi bi-telephone" style="padding-right: 5px;"></i> +1(888)548-4344</a> <br>
+                        </address>
+                    </details>  
+               </div>
+                <details class="fmenu">
+                    <summary><span>CATEGORIEST</span></summary>
+                        
+                            <ul class="footer-menu">
+                                <li><a href="404.html" class="fmenu-item flink">Alcohol</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Art</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Books</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Drink</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Electronics</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Home</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Jewelry</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Kids &amp; Baby</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Men's Fashion</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Mobile</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Motorcycles</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Movies</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Music</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Sport</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Toys</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Travel</a></li>
+                                <li><a href="404.html" class="fmenu-item flink">Women's Fashion</a></li>
+                                
+                            </ul>
+                        
+
+                </details>
+
+                <details  class="footer-about">
+                    <summary><span>ABOUT</span></summary>
+                    
+                        <ul>
+                            <li><a href="404.html" class="fmenu-item flink">About Us</a></li>
+                            <li><a href="404.html" class="fmenu-item flink">Delivery</a></li>
+                            <li><a href="404.html" class="fmenu-item flink">Testimonials</a></li>
+                            <li><a href="404.html" class="fmenu-item flink">Contact</a></li>
+                            
+                        </ul>
+                    
+                </details>
+            
+                
+            </div>
+            <p id="copyright" class="copyright" style="margin-top: 30px; text-align: center; font-size: 12px; font-weight: 400;"></p>
+            
+            <div class="social-links">
+                <a href="404.html"><img src="img/social-facebook.svg" alt="facebook"></a>
+                <a href="404.html"><img src="img/social-google.svg" alt="google+"></a>
+                <a href="404.html"><img src="img/social-twitter.svg" alt="twitter"></a>
+                <a href="404.html"><img src="img/social-pinterest.svg" alt="pinterest"></a>
+            </div>
+
+        </footer>
+    </div>
+    <div class="modalcookie hidden" id="modalcookie" >
+        <div id="cookies-container">
+            <h4>This website uses cookies <span onclick="document.getElementById('modalcookie').style.display='none'" class="x" title="Close Cookies">&times;</span></h4>
+            <p>OSF uses its own and third-party cookies for statistical purposes.
+                If You continue browsing, we consider that you accept its use. <br>
+                You can expand this information consulting our <a href="#">Cookies Policy Page</a>.
+                <button id="accept">Accept</button>
+            </p>
+        </div>
+    </div>
+
+    <!-- <script>
+        function menuIconChange(x) {
+          x.classList.toggle("change");
+        }
+    </script> -->
+    <script>
+        function dTwo() {
+            document.getElementById('dropdownTwo').classList.remove('hide-mobile');
+            }
+    </script>
+    <script src="js/loadmore.js"></script>
+    <script src="js/slideshow-container.js"></script>
+    <script src="js/featured-slider.js"></script>
+    <script src="js/addtocart.js"></script>
+    
+    <script src="js/login.js"></script>
+    <script src="js/dropdown-menu.js"></script>
+   
+    <script src="js/normalize-menu.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/year.js"></script>
+    <script src="js/cookies.js"></script>
+</body>
+</html>
